@@ -1,0 +1,29 @@
+<div id="address">
+	<header class="ad_header">
+        <div class="haveproduct">
+            <a class="icon iconfont icon-htmal5icon37 back" (click)="goBack($event)"></a>
+            <h2 class="title">编辑收货地址</h2>
+            <a class="compile" (click)="complete($event)">完成</a>
+            <a class="complete" *ngIf="showBtn" (click)="complete($event)">完成</a>
+        </div>
+    </header>
+    <main class="ad_main">
+    	<ul class="fill_address">
+    		<li>
+    			<label for="username">收货人：</label>
+    			<input type="text" id="username"/>
+    		</li>
+    		<li>
+    			<label for="tel">手机号：</label>
+    			<input type="text" id="tel"/>
+    		</li>
+    		<li>
+                <sanjiliandong class="liandong"></sanjiliandong>
+    		</li>
+    		<li>
+    			<label for="detailaddress">详细地址：</label>
+    			<input type="text" id="detailaddress"/>
+    		</li>
+    	</ul>
+    </main>
+</div>

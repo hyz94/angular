@@ -1,0 +1,36 @@
+<header class="i_head">
+    <div class="h_l"><i class="icon iconfont icon-meilishuo"></i></div>
+    <div class="search">
+        <i class="icon iconfont icon-sousuosearch82"></i>
+        <input type="text" placeholder="请搜索，例如：连衣裙" id="ipt" (keyup)="hsearch($event)"/>
+    </div>
+    <div class="h_r"><a routerLink="/meilisindex">取消</a></div>
+</header>
+<h1 class="not" *ngIf=show1 >搜索不到结果~~</h1>
+<div class="hot_search" *ngIf=show2>
+    <h3><i class="icon iconfont icon-msnui-hot"></i>热门搜素</h3>
+    <ul>
+        <li class="active"><a routerLink="/meilisclassify">连衣裙</a></li>
+        <li><a routerLink="/meilisclassify">小白鞋</a></li>
+        <li class="active"><a routerLink="/meilisclassify">精选套装</a></li>
+        <li><a routerLink="/meilisclassify">碎花连衣裙</a></li>
+        <li class="active"><a routerLink="/meilisclassify">明星同款</a></li>
+        <li class="active"><a routerLink="/meilisclassify">高跟鞋</a></li>
+        <li><a routerLink="/meilisclassify">男友</a></li>
+        <li class="active"><a routerLink="/meilisclassify">配饰</a></li>
+    </ul>
+</div>
+<div class="s_gl" *ngIf=show3>
+    <ul class="s_goods">
+        <li *ngFor="let item of dataset" (click)="getid(item.id)">
+            <img src="{{item.img}}" alt="" />
+            <p>{{item.name}}</p>
+            <div class="info">
+                <span>￥ {{item.price}}.00 </span>
+                <span>
+                <i class="icon iconfont icon-xingxing1">{{item.saleqty}}</i>
+                </span> 
+            </div>
+        </li>
+    </ul>
+</div>

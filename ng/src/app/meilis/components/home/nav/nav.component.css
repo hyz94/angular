@@ -1,0 +1,39 @@
+.nnav{
+    height:1.5625rem;
+    background:#FAFAFA;
+}
+.nnav ul{
+    display:flex;
+}
+.nnav ul li{
+    flex:1;
+    height:1.5625rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.nnav ul li a{
+    color:#999;
+    display:block;
+    font-size:.4375rem;
+    height:100%;
+    width: 100%;
+    line-height:.59375rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.nnav ul li a i{
+    display:block;
+    font-size:.625rem;
+    height:.625rem;
+    line-height:.625rem;
+}
+.nnav>ul>li a{
+    text-decoration:none;
+}
+.nnav ul li .active{
+    color:#FF3066;
+}

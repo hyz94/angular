@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_620104_8yu8dsds6d9xjemi.css" />
+
+<div class="chat">
+
+    <div class="title" >
+        <div class="goback"  (click)="goback()">
+            <i class="iconfont icon-arrow-left"></i>
+        </div>
+        美丽说客服
+    </div>
+    <ul class="chatCont">
+       <!-- <li class="active"> <div id="show"></div></li> -->
+    </ul>
+    <div class="chatFoot">
+        <textarea type="text" id="saytext" name="saytext" class="chatMsg" [(ngModel)]="msg" placeholder="打个招呼"></textarea>
+        <span class="emotion" (click)="chufa()">
+            <img src="http://localhost:4200/assets/img/emoji.png" alt="" />
+        </span>
+        <input type="button" class="sendBtn" value="发送" (click)="sendMsg()"  />
+    </div>
+
+  
+    <!-- <div class="comment"> -->
+        <!-- <div class="com_form"> -->
+            <!-- <textarea class="input" id="saytext" name="saytext"></textarea> -->
+            <!-- <p> -->
+                <!-- <input type="button" class="sub_btn" value="提交"> -->
+                <!-- <span class="emotion" (click)="chufa()" >表情</span> -->
+          <!--   </p>
+        </div> -->
+    <!-- </div> -->
+
+</div>

@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_620104_8yu8dsds6d9xjemi.css" />
+<div class="userSetting">
+
+    <div class="title" >
+        <div class="goback"  (click)="goback()">
+            <i class="iconfont icon-arrow-left"></i>
+        </div>
+        个人信息
+    </div>
+
+    <ul class="userInfo">
+        <li>
+            <a href="javascript:void(0)" (click)="changePortrait()" id="porTr" >
+                <span>头像</span>
+                <img src="{{datePicker.imgUrl}}"  alt=""  />
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <span>昵称</span>
+                <span id="nickName">{{datePicker.username}}</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <span>性别</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <span>用户ID</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <span>个人说明</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" routerLink="/birSetting">
+                <span>生日设置</span>
+                <span id="birthTip">{{datePicker.birthDay}}</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">
+                <span>收货地址</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" routerLink="/security">
+                <span>账号与安全</span>
+                <i class="iconfont icon-youjiantou1"></i>
+            </a>
+        </li>
+    </ul>
+    
+    <div class="plaCenter">
+         <div class="chepic" >
+            <h5>选择图片</h5>
+            <input type="file"  name="head" class="pic"  (change)="getpic($event)" />
+            <img src="" alt="" />
+        </div>
+        <input type="button" value="确定"  (click)="updata()" class="btnSure" />
+        <input type="button" value="取消"  (click)="hideGetpic()" class="btnExit" />
+    </div>
+   
+</div>

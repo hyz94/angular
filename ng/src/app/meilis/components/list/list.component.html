@@ -1,0 +1,47 @@
+<div id="j_list">
+    <header id="list_header">
+        <a [routerLink]="['/meilisclassify']">
+            <i class="cl_flower  iconfont icon-htmal5icon37"></i>
+        </a>
+        <i class="cl_maginify iconfont icon-sousuosearch82"></i>
+        <input type="text" placeholder="搜索" (click)="dimSearch()"/>
+        <i class="cl_review iconfont icon-xiazai16"></i>
+    </header>
+    <section id="list_select" *ngIf="dataset">
+        <div>
+            <ul [style.width.rem]=ulwidth *ngIf="dataset">
+           
+               <li *ngFor='let obj of dataset' (click)="selectSt(obj.smalltype)">
+                    <img src={{obj.img}}/>
+                    <p>{{obj.smalltype}}</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <main id="list_goods">
+        <div class="list_tab">
+            <span class="popular" (click)="popular()">流行</span>
+            <span class="hotSale" (click)="hotSale()">热销</span>
+            <span class="upNew" (click)="newTime()">上新</span>
+            <div class="out">
+                <span class="price" (click)="price('out')">价格</span>
+                <i class="iconfont icon-icon--1"></i>
+            </div>
+            <div class="up">
+                <span class="price" (click)="price('up')">价格</span>
+                <i class="iconfont icon-icon--"></i>
+            </div>
+        </div>
+        <ul>
+            <li *ngFor='let obj of listdata'>
+                <a [routerLink]="['/meilisdetail']" [queryParams]="{id: obj['id']}">
+                    <img src={{obj.img}}/>
+                    <p class="goods_name">{{obj.name}}</p>
+                    <p class="j_sales">￥{{obj.saleprice}}.00</p>
+                    <p class="j_price"><del>￥{{obj.price}}.00</del></p>
+                </a>
+            </li>
+           
+        </ul>
+    </main>
+</div>

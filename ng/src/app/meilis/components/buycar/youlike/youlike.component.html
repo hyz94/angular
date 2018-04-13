@@ -1,0 +1,18 @@
+<div class="youlike">
+	<h2 class="like_top">猜你喜欢</h2>
+	<div class="like_main">
+		<ul class="like_list">
+			<li class="like_product" *ngFor="let item of dataset">
+				<img src="{{item.img}}" alt=""/>
+				<p>{{item.name}}</p>
+				<div class="price">
+					<span>￥{{item.price}}</span>
+					<div class="collect">
+						<span>{{item.collect}}</span>
+						<i class="icon iconfont icon-shoucang"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

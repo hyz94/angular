@@ -1,0 +1,38 @@
+<div class="detailnav">
+  <ul>
+      <li class="z_li">
+          <a routerLinkActive="active">
+              <i class="icon iconfont icon-msnui-service-call"></i>
+              <span>客服</span>
+          </a>
+      </li>
+      <li class="z_li">
+          <a  routerLinkActive="active">
+              <i class="icon iconfont icon-dianpu"></i>
+              <span>店铺</span>
+          </a>
+      </li>
+      <li class="z_li1" (click)="collect()">
+          <a routerLinkActive="active">
+              <i class="icon iconfont icon-shoucang"></i>
+              <span>收藏</span>
+          </a>
+      </li>
+      <li class="z_li2" (click)="collectF()">
+          <a routerLinkActive="active">
+              <i class="icon iconfont icon-shoucang"></i>
+              <span>收藏</span>
+          </a>
+      </li>
+      <li class="y_li y_li1">
+          <span (click)="childrenEvent(true)">加入购物车</span>
+      </li>
+      <li class="y_li y_li2">
+          <span>购买</span>
+      </li>
+  </ul>
+  <div class="collectS">收藏成功</div>
+  <div class="collectF">取消收藏</div>  
+  
+</div>
+

@@ -1,0 +1,109 @@
+<header class="i_head">
+    <div class="h_l"><i class="icon iconfont icon-meilishuo"></i></div>
+    <div class="search" (click)="tosearch()">
+        <i class="icon iconfont icon-sousuosearch82"></i>
+        <input type="text" placeholder="套装"/>
+    </div>
+    <div class="h_r" (click)="tochat()"><i class="icon iconfont icon-xiazai16"></i></div>
+</header>
+<div class="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../../../../assets/img/banner1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="../../../../assets/img/banner2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="../../../../assets/img/banner3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="../../../../assets/img/banner4.jpg" alt="" />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+</div>
+<div class="new">
+    <ul>
+        <li>
+            <img src="../../../../assets/img/li1.gif" alt="" />
+            <p>圣诞种草</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/li2.png" alt="" />
+            <p>新品速递</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/li3.png" alt="" />
+            <p>大家都在卖</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/li4.png" alt="" />
+            <p>签到领券</p>
+        </li>
+    </ul>
+</div>
+<div class="liuxing">
+    <h3>本周流行</h3>
+    <ul>
+        <li>
+            <img src="../../../../assets/img/liu1.png" alt="" />
+            <p>霸街长袖裙</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/liu2.png" alt="" />
+            <p>时尚懒人套装</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/liu3.png" alt="" />
+            <p>微胖遮肉穿搭</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/liu4.png" alt="" />
+            <p>降温保暖鞋</p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <img src="../../../../assets/img/liu5.png" alt="" />
+            <p>颜值爆表套装裙</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/liu6.png" alt="" />
+            <p>小心机V领</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/liu7.png" alt="" />
+            <p>万圣节必备口红</p>
+        </li>
+        <li>
+            <img src="../../../../assets/img/liu8.png" alt="" />
+            <p>软萌暖心包包</p>
+        </li>
+    </ul>
+    <p><a routerLink="/meilislist">查看更多 > </a></p>
+</div>
+<div class="clothes" (scroll)="onScroll($event)">
+    <ul>
+        <li (click)="liuxing($event)"><span>流行</span></li>
+        <li (click)="xinkuan($event)"><span>新款</span></li>
+        <li (click)="jingxuan($event)"><span>精选</span></li>
+    </ul>
+</div>
+<ul class="gdlist" >
+    <li *ngFor="let item of dataset" (click)="getid(item.id)">
+        <img src="{{item.img}}" alt="" />
+        <p>{{item.name}}</p>
+        <div class="info">
+            <span>￥ {{item.price}}.00 </span>
+            <span>
+            <i class="icon iconfont icon-xingxing1">{{item.saleqty}}</i>
+            </span> 
+        </div>
+    </li>
+</ul>

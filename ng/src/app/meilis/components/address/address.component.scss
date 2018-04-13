@@ -1,0 +1,91 @@
+html,body{height:100%;width:100%;}
+#address{
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	background: #EEEEEE;
+	.ad_header{
+		height:1.25rem;
+		background:#fff;
+		border-bottom:1px solid #CDCCCC;
+		.haveproduct{
+			display:flex;
+			height:1.25rem;
+			flex-direction:row;
+			justify-content:space-between;
+			align-content:center;
+			.back{
+				display:block;
+				height:1.25rem;
+				width:1.5rem;
+				font-size:0.666667rem;
+				line-height:1.25rem;
+				text-align:center;
+				color:#5E5E5E;
+			}
+			.title{
+				font-size:0.4375rem;
+				line-height:1.25rem;
+				color:#3C3C3C;
+				font-weight:bolder;
+			}
+			.compile{
+				display:block;
+				height:1.25rem;
+				width:1.5rem;
+				font-size:0.373333rem;
+				line-height:1.25rem;
+				text-align:center;
+				color:#888888;
+			}
+			.complete{
+				display:block;
+				height:1.25rem;
+				width:1.5rem;
+				font-size:0.373333rem;
+				line-height:1.25rem;
+				text-align:center;
+				color:#888888;
+			}
+		}
+		.noproduct{
+			height:1.25rem;
+			line-height:1.25rem;
+			font-size:0.4375rem;
+			text-align:center;
+			color:#3C3C3C;
+		}
+	}
+	.ad_main{
+		margin-top:0.56rem;
+		height:4.786667rem;
+		background: #fff;
+		border-top:1px solid #CDCCCC;
+		border-bottom:1px solid #CDCCCC;
+		.fill_address{
+			height:100%;
+			li{
+				height:1.173333rem;
+				font-size:0.4rem;
+				color:#000;
+				line-height:1.173333rem;
+				display:flex;
+				label{
+					display:block;
+					width:2.266667rem;
+					text-align:right;
+					font-weight:bolder;
+				}
+				input{
+					flex:1;
+					border:1px solid #fff;
+					font-size:0.4rem;
+					color:#000;
+				}
+				.liandong{
+					width:100%;
+				}
+			}
+		}
+	}
+}

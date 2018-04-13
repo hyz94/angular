@@ -1,0 +1,65 @@
+<div id="account">
+	<header class="a_header">
+        <a class="icon iconfont icon-htmal5icon37 back" (click)="goBack($event)"></a>
+        <h2 class="title">确认订单</h2>
+    </header>
+    <a class="a_address" (click)="goAddress($event)">
+    	<div class="address_left">
+    		<span class="icon iconfont icon-dizhi1"></span>
+    	   <p *ngIf="noAddress">请填写收货地址</p>
+            <div class="detail_user" *ngIf="hasAddress">
+                <p class="user_username">收货人：{{newAddress.user}}</p>
+                <p class="user_address">{{newAddress.address}}</p>
+            </div>
+    	</div>
+    	<i class="icon iconfont icon-qianjin"></i>
+    </a>
+    <main class="a_main">
+    	<ul class="accountlist">
+    		<li class="accountproduct" *ngFor="let item of accountData">
+    			<div class="product_detail">
+    				<img src="{{item.img}}" alt=""/>
+    				<div class="product_name">
+    					<p class="title">
+    						{{item.name}}
+    					</p>
+    					<p class="prop">
+    						<span class="first">颜色：{{item.color}}</span>  
+    						<span class="">尺码：{{item.size}}</span>  
+    					</p>
+    				</div>
+    				<div class="product_price">
+    					<span class="price">￥{{item.price}}</span>
+    					<div class="qty_btn" *ngIf="item.btn">
+	    					<div class="sub_btn" (click)="subQty(item.id,item.qty)">-</div>
+	    					<span class="qty">{{item.qty}}</span>
+	    					<div class="add_btn" (click)="addQty(item.id,item.qty)">+</div>
+	    				</div>
+    					<span class="qty" *ngIf="!item.btn">
+    						&times;{{item.qty}}
+    						<i class="icon iconfont icon-shuxie" (click)="showBtn(item.id)"></i>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="yunfei">
+    				<p>快递运费：</p>
+    				<span>￥0.00</span>
+    			</div>
+    			<div class="total">
+    				<p>合计：</p>
+    				<span>￥{{item.qty*item.price}}</span>
+    			</div>
+    			<div class="explain">
+    				<input type="text" placeholder="订单补充说明..."/>
+    			</div>
+    		</li>
+    	</ul>
+    </main>
+    <footer class="a_foot">
+    	<div class="total">
+    		<i>总计</i>
+    		<span>￥{{totalNum}}</span>
+    	</div>
+    	<a class="commit">提交订单</a>
+    </footer>
+</div>

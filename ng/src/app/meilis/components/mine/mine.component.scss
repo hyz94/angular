@@ -1,0 +1,158 @@
+/*清除浮动*/
+.clearfix::after{
+    content:"";
+    display: block;
+    height: 0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+    /*兼容ie*/
+   zoom:1;
+}
+.fl{float:left;}
+.fr{float:right;}
+.mine{
+    background-color: #fff;height: 100%;
+    .title{
+        
+        height: 1.4375rem;padding-left: 0.3125rem;padding-right: 0.6875rem;line-height: 1.375rem;
+     
+
+        .shezhi{
+            display:block;
+            .iconfont{font-size: 0.75rem;color:#4B4B4B;}
+        }
+
+        .chat{
+            .iconfont{font-size: 0.75rem;}
+        }
+
+
+    }
+
+    .userInfo{
+        padding: 0.13125rem 0 0.3875rem 0.3125rem;
+        border-bottom: 0.125rem solid #F1F5F8;position:relative;
+        .protrait{
+            img{
+                border-radius:50%;
+            }
+        }
+        .userCenter{
+            padding: 0 0.3125rem;
+            .userCenter_l{
+                width: 3.375rem;
+                .userId{
+                    width: 3.375rem;
+                    display:inline-block;
+                    font-size: 0.625rem;line-height: 1.3125rem;color:#161616;font-weight: 500;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+
+                .jifen{
+                    color:#737373;font-size: 0.375rem;line-height: 0.625rem;
+                    font-weight: 600;
+                }
+            }
+            .userCenter_r{
+                padding-top: 0.3125rem;
+            }
+           
+        }
+        .qiandao{
+            padding-top: 0.65625rem;position:absolute;right: 0;top: 0.96875rem;
+        }
+    }
+
+    .orderTab{
+        padding-left: 0.3125rem;border-bottom:0.125rem solid #F1F5F8;
+        display:flex;list-style:none;
+        
+
+        li{  
+
+            flex:1;justify-content:center;
+            align-items:center;
+            a{  
+                display:flex;flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                height: 2.71875rem; 
+                padding-top: 0.21875rem;
+                font-size: 0.4375rem;color:#3C3C3C;font-weight: 500;text-decoration:none;
+                i{
+                    display:block;
+                    height: 1.5rem;font-size: 0.75rem;line-height: 1.5rem;color: #5F5F5F;
+                }
+                
+            }
+           
+          
+        }
+
+
+    }
+    .mainList{
+        padding:0.5rem 0.3125rem 0 0.3125rem;border-bottom:0.125rem solid #F1F5F8;
+
+       li{
+            list-style:none;float:left;
+            a{
+                display:block;background-color: #EAF9F4;text-decoration:none;
+                width: 1.946875rem;margin-right: 0.375rem;margin-bottom:0.46875rem;
+                font-size: 0.46875rem;line-height: 62px;text-align:center;
+                padding-top: 0.5rem;color:#B3AD9A;
+                &.youhuiquan{
+                    background-color: #E8F3F7;
+                }
+                &.huiyuan{
+                    background-color: #FEF9DC;   
+                }
+                &.kefu{
+                    background-color: #EAFAF7;
+                }
+                &.shoucang{
+                    background-color: #FFF6FB;
+                }
+                &.zuji{
+                    background-color: #F5F3FF;
+                }
+                &.xihuan{
+                    background-color: #FEF0EF;
+                } 
+                &.hot{
+                    background-color: #BCFCE6;
+                }  
+                &.wuR{
+                    margin-right: 0;
+                }
+
+                i{
+                    display:block;font-size: 0.8125rem;line-height: 1.0rem;color:#8E888C;
+                }
+            }
+       }
+    }
+    .adver{
+        padding:0.375rem 0.3125rem 0.375rem 1.6875rem;
+        position: relative;background: #fff;
+        .mogujie{
+            font-size: 0.4375rem;line-height: 0.8125rem;font-weight: 900;color:#5F5F5F;
+        }
+        .adverInfo{
+            font-size: 0.375rem;line-height: 0.75rem;font-weight: 700;color:#717171;
+        }
+        .adverDonload{
+            width: 1.5rem;height: 0.75rem;border-radius:0.3125rem;font-size: 0.375rem;
+            border:0.0625rem solid #D02E61;color:#D02E61;background-color: #FFF;
+            position:absolute;right: 0.3125rem;top: 0.5625rem;
+        }
+
+    }
+    .last{
+       background-color: #F1F5F8;border-bottom:0.078125rem solid #E8E8E8;
+    }
+
+}

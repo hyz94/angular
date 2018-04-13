@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_620104_8yu8dsds6d9xjemi.css" />
+<div class="userSetting">
+
+    <div class="title" >
+        <div class="goback"  (click)="goback()">
+            <i class="iconfont icon-arrow-left"></i>
+        </div>
+        <span class="getpwd">设置密码</span>
+        <span class="last"  (click)="golast(pwdo.value,pwdt.value)">完成</span>
+    </div>
+   
+    <ul class="userInfo">
+        <li>
+           <input type="password"  placeholder="请输入密码" class="pwdCont" [(ngModel)]="pwd1" #pwdo/>
+        </li>
+         <li>
+           <input type="password"  placeholder="请重新输入密码" class="pwdCont" [(ngModel)]="pwd2" #pwdt/>
+        </li>
+    </ul>
+</div>

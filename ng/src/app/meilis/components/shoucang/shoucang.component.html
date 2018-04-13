@@ -1,0 +1,16 @@
+<div id="shoucang">
+    <header class="b_header">
+        <div class="haveproduct">
+            <a class="icon iconfont icon-htmal5icon37 route" (click)="goback()"></a>
+            <h2 class="title">收藏列表</h2>
+        </div>
+        <!-- <h2 class="noproduct" *ngIf="!dataset">购物车</h2> -->
+    </header>
+    <div *ngIf="!dataset" class="nullcar">
+        <div class="nullcar_top">
+            <p>收藏列表空空如也</p>
+            <a>随便逛逛</a>
+        </div>
+        <!-- <youlike class="nullcar_bottom"></youlike> -->
+    </div>
+</div>

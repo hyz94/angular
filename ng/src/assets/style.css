@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**CSS Reset**/
+body, div, span, h1, h2, h3, h4, h5, h6, header, footer, section, article, aside, details, figcaption, figure, hgroup, nav, menu, address, time, canvas, audio, video, p, pre, sup, sub, ul, ol, li, dl, dt, dd, form, input, button, textarea, select, iframe, img, a { padding: 0; margin: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+header, footer, section, article, aside, details, figcaption, figure, hgroup, nav, menu { display: block; }
+html, body { font-size: 20px; -webkit-overflow-scrolling: touch; }
+body { background-color: #eee; color: #333; font-family: "Helvetica Neue", "Microsoft Yahei", Tahoma, Arial, Roboto, "Droid Sans", "Droid Sans Fallback", "Heiti SC", sans-self; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+ul, ol { list-style-type: none; }
+a { color: #333; text-decoration: none; outline: none; }
+a:link, a:visited, a:hover, a:active { color: #333; outline: none; }
+
+.iphone { width: 100%; height: 1.173333rem; }
+.browser { position: relative; width: 100%; height: 100%; overflow: hidden; }
+/*@media (min-width: 721px) and (max-width: 1300px) {
+	.iphone { width: 270px; height: 562px; padding: 128px 23px 111px; margin: 20px auto; background-size: 270px 562px; }
+	.browser { width: 224px; height: 323px; }
+}
+@media (max-width: 720px) {
+	.iphone { width: 100%; height: 100%; padding: 0; background: none; }
+	.browser { width: 100%; height: 100%; }
+}*/
+/*选择地区*/
+.express-area { background-color: #fff; }
+.express-area a { display: block; background: url(./img/link-arrow.png) no-repeat 98% 50%; background-size: .55rem .55rem; }
+.express-area dl { position: relative; line-height: 1.2rem; color: #4d525d; }
+.express-area dl dt { position: absolute; top: 0; left: 0; font-size: 0.4rem; line-height: 1.2rem; color:#000;font-weight:bolder;width:2.266667rem;text-align:right;}
+.express-area dl dd { padding-top: .1rem; padding-right: .8rem; margin-left: 2.666667rem; text-align: justify; font-size: 0.346667rem; line-height: 1rem; color:#000;}
+/*@media (min-width: 721px) and (max-width: 1300px) {
+	.express-area a { padding: .3rem; }
+	.express-area dl dt { font-size: .5rem; line-height: 1rem; }
+	.express-area dl dd { padding-right: .6rem; margin-left: 3rem; font-size: .4rem; line-height: .8rem; }
+}*/
+/*选择地区弹层*/
+.express-area-box { position: fixed; z-index: 15; width: 10.0rem; background-color: #fff; color: #4d525d; bottom:-100%;height:8.0rem; font-size:0.4rem;}
+.express-area-box header { position: relative; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; height:1.2rem;}
+.express-area-box header h3 { margin: 0 1.675rem; text-align: center; font-size: .4rem; line-height: 1.226667rem; color:#000;}
+.express-area-box header .back,
+.express-area-box header .close { position: absolute; top: 0; width: 0.893333rem; height: 1.2rem; }
+.express-area-box header .back { display: none; left: 0.266667rem;  font-size:0.533333rem;}
+.express-area-box header .close { right: 0.266667rem; font-size:0.533333rem; }
+.express-area-box article { height: 6.666667rem; overflow-y: scroll; }
+#areaBox .area-list li { padding: 0.266667rem; border-bottom: 1px solid #e2e2e2; text-align: justify; font-size: .3rem; line-height: 0.946667rem; color:#000;}
+/*@media (min-width: 721px) and (max-width: 1300px) {
+	.express-area-box { width: 224px; margin-left: -112px; }
+	.express-area-box header h3 { font-size: .7rem; line-height: 1.7rem; }
+	.express-area-box header .back,
+	.express-area-box header .close { height: 1.7rem; }
+	.express-area-box article { height: 120px; }
+	.area-list li { padding: .3rem; font-size: .4rem; line-height: 1rem; }
+}
+@media (max-width: 720px) {
+	.express-area-box { position: fixed; left: 0; width: 100%; margin-left: 0; }
+}*/
+/*遮罩层*/
+.mask { display: none; position: fixed; top: 0; left: 0; z-index: 12; width: 100%; height: 100%; background-color: rgba(0,0,0,.5); }
+/*@media (max-width: 720px) {
+	.mask { position: fixed; }
+}*/

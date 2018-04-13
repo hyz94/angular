@@ -1,0 +1,253 @@
+<div class="hyz_detail">
+  <div class="cartFixed"><i class="iconfont icon-gouwuche2"></i><span class="cartQty"></span></div>
+  <div class="head">
+    <a routerLink="/meilisclassify" routerLinkActive="active">
+      <i class="icon iconfont icon-htmal5icon37"></i>
+    </a>
+    <h3>商品详情</h3>
+    <a routerLink="/meilisbuycar" routerLinkActive="active">
+      <i class="icon iconfont icon-gouwuche2 fr"></i>
+    </a>
+  </div>
+  <div class="detail_cont" *ngIf="dataset">
+    <div class="banner">
+      <div class="swiper-container2">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img [src]="dataset[0]['imgurl1']" alt="" />
+              </div>
+              <div class="swiper-slide">
+                  <img [src]="dataset[0]['imgurl2']"alt="" />
+              </div>
+              <div class="swiper-slide">
+                  <img [src]="dataset[0]['imgurl3']"alt="" />
+              </div>
+          </div>
+      </div>
+    </div>
+    <p class="goodsName">{{dataset[0]['name']}}</p>
+    <div class="goodsParmas">
+      <span class="goodsSalePrice">￥{{dataset[0]['saleprice']}}</span>
+      <span class="goodsPrice">￥{{dataset[0]['price']}}</span>
+      <span class="goodsCX">限量促销</span>
+    </div>
+    <div class="goodsSC">
+      <span>销量{{dataset[0]['saleqty']}}</span>
+      <span>收藏{{dataset[0]['collect']}}</span>
+      <span>72小时发货</span>
+    </div>
+    <div class="WLY">
+      <i><img src="./assets/img/detail_gou.png" alt=""></i>  
+      <span class="span12">退货补运费</span>  
+      <i><img src="./assets/img/detail_gou.png" alt=""></i>  
+      <span class="span12">退货补运费</span>
+      <i><img src="./assets/img/detail_gou.png" alt=""></i>  
+      <span>退货补运费</span>
+    </div>
+    <div class="shop-info">
+      <div class="head">
+        <img src="./assets/img/detail_shop.jpg" alt="">
+        <span class="shopName">&nbsp;&nbsp;&nbsp;&nbsp;threecats  </span>
+        <span class="shopCollect">+收藏</span>
+      </div>
+      <div class="shopDsc">
+        <div class="shopQty">
+          <span>27.9万</span>
+          <span>491</span>
+          <br>
+          <span>总销量</span>
+          <span>全部宝贝</span>   
+        </div>
+        <div class="shopdsc">
+          <ul>
+            <li>
+              <span>描述相符</span>
+              <span class="shopGreen">4.65</span>
+              <span class="shopBGGreen">低</span>
+            </li>
+            <li>
+              <span>价格合理</span>
+              <span class="shopRed">5.00</span>
+              <span class="shopBGRed">高</span>
+            </li>
+            <li>
+              <span>质量满意</span>
+              <span class="shopGreen">4.65</span>
+              <span class="shopBGGreen">低</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="shopGG">进店逛逛</p>
+    </div>
+    <div class="recommend">
+      <p class="forYou">为你推荐</p>
+      <!-- <ul class="recommendGoods" *ngIf="recommendDataset">
+        <li *ngFor="let obj of recommendDataset">
+          <img [src]="obj.img" alt="">
+          <p class="recommendPrice">￥{{obj.price}}</p>
+        </li>
+      </ul> -->
+      <div class="recommendGoods">
+        <div class="swiper-container1"  *ngIf="recommendDataset">
+          <div class="swiper-wrapper" style="padding-bottom: '.78125rem'">
+            <div class="swiper-slide" *ngFor="let obj of recommendDataset">
+                <img class="swiperImg" [src]="obj['img']" alt="">
+                <p class="recommendPrice">￥{{obj.price}}</p>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="goodsDsc">
+      <nav>
+        <ul>
+          <li><span>图文详情</span></li>
+          <li><span>商品参数</span></li>
+          <li><span>评价(25)</span></li>
+          <li><span class="lastSpan">热卖推荐</span></li>
+        </ul>
+      </nav>
+      <div class="dscDX1"><i></i><span></span></div>
+      <p>非常好看的一套，可以单卖的。喜欢的购买，保证质量。高品质全棉材质 质感很好 简单时尚</p>
+      <div class="dscDX2"><span ></span><i class="fr"></i></div>
+      <p class="goodsXG">穿着效果</p>
+      <div class="goodsImg">
+        <img [src]="dataset[0]['imgurl1']" alt="">
+        <img [src]="dataset[0]['imgurl2']" alt="">
+        <img [src]="dataset[0]['imgurl3']" alt="">
+        <img src="./assets/img/detail_dsc1.jpg" alt="">
+        <img src="./assets/img/detail_dsc2.jpg" alt="">
+        <img src="./assets/img/detail_dsc3.jpg" alt="">
+        <img src="./assets/img/detail_dscprice1.jpg" alt="">
+      </div>
+      <div class="goodsTable">
+        <ul>
+          <li><span class="tablecolor">商品参数</span></li>
+          <li class="tableCS"><span>尺码</span><span>S</span><span>M</span><span>L</span></li>
+          <li class="tableCS"><span>肩宽</span><span>46</span><span>47</span><span>48</span></li>
+          <li class="tableCS"><span>衣长</span><span>57</span><span>58</span><span>59</span></li>
+          <li><span>图案</span><span>色块</span></li>
+          <li><span>厚薄</span><span>普通</span></li>
+          <li><span>颜色</span><span>白色t恤单件,浅蓝色t恤单件,锈红色背带裙单件,白色背带裙+浅蓝色t恤两件套,白色背带裙单件,锈红色背带+白色t恤两件套</span></li>
+          <li><span>袖型</span><span>插肩袖</span></li>
+          <li><span>尺码</span><span>S,L,M</span></li>
+          <li><span>衣长</span><span>常规款（51-65cm）</span></li>
+          <li><span>季节</span><span>春季</span></li>
+          <li><span>材质</span><span>棉</span></li>
+          <li><span>领型</span><span>圆领</span></li>
+          <li><span>袖长</span><span>短袖</span></li>
+          <li><span>款式</span><span>衣裙套装</span></li>
+          <li><span>风格</span><span>性感</span></li>
+          <li><span>潮流</span><span>韩系</span></li>
+        </ul>
+      </div>
+      <div class="buyRcommend">
+        <div class="head">
+          <span>购买评价</span>
+          <span>更多></span> 
+        </div>
+        <div class="myRecommend">
+          <img src="./assets/img/detail_head.jpg" alt="">
+          <span>&nbsp;&nbsp;&nbsp;念去去裂</span>
+        </div>   
+        <p class="tashuo">质量很好，非常喜欢，t恤和牛都是纯棉的，喜欢的宝宝可以购买，颜色有点点偏暗，不过不影响我对这套衣服的喜爱</p>
+        <p class="timecolor"><span>2018-04-03</span> <span>颜色:锈红色背带+白色t恤两件套 尺码:L </span></p>
+        <div class="recommendimg">
+          <img src="./assets/img/bb5-1.jpg" alt="">
+          <img src="./assets/img/bb5-2.jpg" alt="">
+          <img src="./assets/img/bb5-3.jpg" alt="">
+        </div>
+      </div>
+      <div class="hostGoods">
+        <p>热卖推荐</p>
+        <ul *ngIf="hostDataset">
+          <li *ngFor="let obj of hostDataset">
+            <img [src]="obj['img']" alt="">
+            <p class="hostName">{{obj['name']}}</p>
+            <p class="hostPrice">￥{{obj['saleprice']}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="detail_nav">
+      <ul>
+          <li class="z_li">
+              <a routerLinkActive="active">
+                  <i class="icon iconfont icon-msnui-service-call"></i>
+                  <span>客服</span>
+              </a>
+          </li>
+          <li class="z_li">
+              <a  routerLinkActive="active">
+                  <i class="icon iconfont icon-dianpu"></i>
+                  <span>店铺</span>
+              </a>
+          </li>
+          <li class="z_li1" (click)="collect()">
+              <a routerLinkActive="active">
+                  <i class="icon iconfont icon-shoucang"></i>
+                  <span>收藏</span>
+              </a>
+          </li>
+          <li class="z_li2" (click)="collectF()">
+              <a routerLinkActive="active">
+                  <i class="icon iconfont icon-shoucang"></i>
+                  <span>收藏</span>
+              </a>
+          </li>
+          <li class="y_li y_li1">
+              <span (click)="addCart()">加入购物车</span>
+          </li>
+          <li class="y_li y_li2">
+              <span (click)="addCart()">购买</span>
+          </li>
+      </ul>
+      <div class="collectS">收藏成功</div>
+      <div class="collectF">取消收藏</div>  
+  </div>
+  <div class="buyShowFixed" *ngIf="dataset">
+    <div class="zhanwei"></div>
+    <div class="allMassage">
+      <div class="goodsMassage" >
+        <span class="closeBuyShow">&times;</span>
+        <img [src]="dataset[0]['img']" alt="">
+        <p class="goodsP">{{dataset[0]['name']}}</p>
+        <p class="goodsPRed"><span>￥{{dataset[0]['saleprice']}}</span></p>
+        <p>请选择颜色尺码</p>
+      </div>
+      <div class="goodsCSQ">
+        <div class="goodsColor">
+          <p>颜色：</p>
+          <p class="clickColor">
+            <span>{{dataset[0]['color']}}</span>
+            <span>天蓝色</span>
+            <span>粉紫色</span>
+          </p>
+        </div>
+        <div class="goodsSize">
+          <p>尺寸：</p>
+          <p class="clickSize">
+            <span>M</span>
+            <span>L</span>
+            <span>XL</span>
+          </p>
+        </div>
+        <div class="goodsQty">
+          <p>数量：</p>
+          <p>
+            <span class="cutQty" (click)="cutQty()">-</span>
+            <span class="qtyGoods">{{dataset[0]['qty']}}</span>
+            <span class="addQty" (click)="addQty()">+</span>
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    <p class="confirmP" (click)="confirmP()">确定</p>
+  </div>
+</div>

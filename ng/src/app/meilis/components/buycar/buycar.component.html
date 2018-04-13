@@ -1,0 +1,77 @@
+<div id="buycar">
+	<header class="b_header">
+        <div class="haveproduct" *ngIf="dataset">
+            <a class="icon iconfont icon-htmal5icon37 back" (click)="goBack($event)"></a>
+            <h2 class="title">购物车({{productNum}})</h2>
+            <a class="compile" (click)="compile($event)" *ngIf="showTxt">编辑</a>
+            <a class="complete" *ngIf="showBtn" (click)="complete($event)">完成</a>
+        </div>
+    	<h2 class="noproduct" *ngIf="!dataset">购物车</h2>
+    </header>
+    <div *ngIf="!dataset" class="nullcar">
+    	<div class="nullcar_top">
+    		<p>购物车空空如也</p>
+    		<a>随便逛逛</a>
+    	</div>
+    	<youlike class="nullcar_bottom"></youlike>
+    </div>
+    <main class="b_main" *ngIf="dataset">
+    	<ul class="buylist">
+    		<li class="buyproduct" *ngFor="let item of dataset.data">
+    			<div class="product_check">
+    				<input type="checkbox" id="{{item.id}}" [(ngModel)]="item.checked"
+    				(click)="oneChecked(item.id,oneCheck.checked)" #oneCheck/>
+    				<label for="{{item.id}}"></label>
+    			</div>
+				<img src="{{item.img}}" alt="" />
+    			<div class="product_txt" *ngIf="showTxt">
+    				<p class="title">
+    				{{item.name}}
+    				</p>
+    				<p class="prop">
+    					<span class="first">颜色：{{item.color}}</span>  
+    					<span class="">尺码：{{item.size}}</span>  
+    				</p>
+    				<div class="product_price">
+    					<span class="price">￥{{item.price}}</span>
+    					<span class="qty">&times;{{item.qty}}</span>
+    				</div>
+    			</div>
+    			<div class="product_qty" *ngIf="showBtn">
+    				<div class="qty_btn">
+    					<div class="sub_btn" (click)="subQty(item.id,item.qty)">-</div>
+    					<span class="qty">{{item.qty}}</span>
+    					<div class="add_btn" (click)="addQty(item.id,item.qty)">+</div>
+    				</div>
+    				<p class="prop">
+    					<span class="first">颜色：{{item.color}}</span>  
+    					<span class="">尺码：{{item.size}}</span>  
+    				</p>
+    			</div>
+    		</li>
+    	</ul>
+    	<youlike class="nullcar_bottom"></youlike>
+    </main>
+    <footer class="b_footer" *ngIf="dataset">
+    	<div class="f_left">
+    		<div class="all_check">
+		    	<div class="box_btn">
+					<input type="checkbox" id="select_all" (click)="allChecked(checkbox.checked)" #checkbox [(ngModel)]="allSelect"/>
+					<label for="select_all" ></label>
+    			</div>
+				<span>全选</span>
+			</div>
+    	</div>
+    	<div class="f_right" *ngIf="showTxt">
+    		<div class="total">
+    			<p class="first">合计：￥{{totalNum}}.00</p>
+    			<p>不含运费、优惠扣减</p>
+    		</div>
+    		<a class="account" (click)="goAccount($event)">去结算({{account}})</a>
+    	</div>
+    	<div class="f_btn" *ngIf="showBtn">
+    		<div class="collect_btn">收藏</div>
+    		<div class="del_btn" (click)="delete($event)">删除</div>
+    	</div>
+    </footer>
+</div>

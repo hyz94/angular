@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>美丽说</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="./assets/swiper-4.2.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/swiper-4.2.0.min.css" />
+  
+  <script type="text/javascript" src="./assets/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="./assets/jquery.qqFace.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_588592_q4y1jt7r86jyk3xr.css" />
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_588592_3k4hmdcpb2249529.css" />
+
+
+  
+
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_606877_m8gf5b5yxkkmlsor.css" />
+  
+  <script src="./assets/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/style.css">
+
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_588592_zwbmjshzs4hadcxr.css" />
+  
+
+  <!-- 媒体查询 -->
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" id="vp"/>
+      <script>
+        var wd = document.documentElement.clientWidth*window.devicePixelRatio/10;
+        document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
+        var scale = 1/window.devicePixelRatio;
+        var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
+        document.getElementById("vp").content = mstr;
+      </script>
+
+</head>
+<body>
+<script type="text/javascript">
+  window.onload = function() {
+    var mySwiper = new Swiper('.swiper-container',{
+      loop: true,autoplay:true,
+      pagination: {
+        el: '.swiper-pagination',
+      }
+    });  
+    var mySwiper = new Swiper('.swiper-container2',{
+      loop: true,autoplay:false,
+      pagination: {
+        el: '.swiper-pagination',
+      }
+    });  
+    var swiper = new Swiper('.swiper-container1', {
+      slidesPerView: 10,
+      slidesPerColumn: 2,
+      // spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    })
+  }
+</script>
+  <app-root></app-root>
+</body>
+</html>

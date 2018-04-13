@@ -1,0 +1,88 @@
+.loginBox{
+    height:100%;
+}
+.l_header{
+    height:90px;
+    display:flex;
+    border-bottom:1px solid #C9C7C8;
+    background:#FAFAFA;
+}
+.l_header a{
+    width:90px;
+    height:100%;
+    text-decoration:none;
+    text-align:center;
+    line-height:90px;
+}
+.l_header a>i{
+    font-size:38px;
+    color:#666;
+}
+.l_header span{
+    width:570px;
+    height:100%;
+    text-align:center;
+    line-height:90px;
+    font-size:34px;
+    color:#666;
+}
+
+.l_container{
+    padding: 1.2rem .6rem 0;
+    background:#fff;
+}
+.l_container>p{
+    text-align:center;
+    font-size:26px;
+    line-height:26px;
+    margin-bottom:40px;
+    color:#666;
+}
+
+
+.l_phone>input{
+    height:66px;
+    border:0 none;
+    border-bottom:1px solid #ededed;
+    width:100%;
+    margin-bottom:50px;
+    text-align:center;
+    font-size:48px;
+    background: #fff;
+}
+/*修改placeholder颜色*/
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #EDEDED;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #EDEDED;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #EDEDED;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #EDEDED;
+}
+.l_yzm .yzmBtn{
+    position:absolute;
+    right:0;top:78px;
+    color:rgb(255, 104, 133);
+}
+.l_yzm .yzmBtn .fsyzm{
+    font-size:22px;
+}
+
+.r_oneKey{
+    width:100%;
+    font-size:34px;
+    height:100px;
+    background:#FF5777;
+    color:#fff;
+    text-align:center;
+    line-height:100px;
+    border:0 none;
+    border-radius: 3px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+

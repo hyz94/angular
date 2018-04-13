@@ -1,0 +1,17 @@
+<div id="manageaddress">
+	<header class="m_header">
+        <div class="haveproduct">
+            <a class="icon iconfont icon-htmal5icon37 back" (click)="goBack($event)"></a>
+            <h2 class="title">管理收货地址</h2>
+            <a class="complete" (click)="goAddress($event)">添加</a>
+        </div>
+    </header>
+    <main class="m_main">
+    	<ul class="alladdress">
+    		<li class="oneaddress" *ngFor = "let item of manageAddress">
+    			<p class="m_username">{{item.user}}</p>
+    			<p class="m_address">{{item.address}}</p>
+    		</li>
+    	</ul>
+    </main>
+</div>

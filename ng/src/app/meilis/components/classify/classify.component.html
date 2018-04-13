@@ -1,0 +1,125 @@
+<div id="classify">
+    <header id="classify_header">
+        <i class="cl_flower  iconfont icon-meilishuo"></i>
+        <i class="cl_maginify iconfont icon-sousuosearch82"></i>
+        <input type="text" placeholder="搜索" class="cl_search" (click)="dimSearch()"/>
+        <i class="cl_review icon iconfont icon-xiazai16"></i>
+    </header>
+    <main id="classify_main">
+        <ul>
+            <li class="classify1">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'精选套装'}">
+                    <img src="./assets/img/classify1.jpg"/>
+                    <p>精选套装</p>
+                </a>
+            </li>
+            <li class="classify2">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'上衣'}">
+                    <img src="./assets/img/classify2.jpg"/>
+                    <p>上衣</p>
+                </a>
+            </li>
+            <li class="classify3">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'裙子'}">
+                    <img src="./assets/img/classify3.jpg"/>
+                    <p>裙子</p>
+                </a>
+            </li>
+            <li class="classify4">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'鞋子'}">
+                    <img src="./assets/img/classify4.jpg"/>
+                    <p>鞋子</p>
+                </a>
+            </li>
+            <li class="classify5">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'卫衣'}">
+                    <img src="./assets/img/classify5.jpg"/>
+                    <p>卫衣</p>
+                </a>
+            </li>
+            <li class="classify6">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'气质毛衣'}">
+                    <img src="./assets/img/classify6.jpg"/>
+                    <p>气质毛衣</p>
+                </a>
+            </li>
+            <li class="classify7">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'裤子'}">
+                    <img src="./assets/img/classify7.jpg"/>
+                    <p>裤子</p>
+                </a>
+            </li>
+            <li class="classify8">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'T恤'}">
+                    <img src="./assets/img/classify8.jpg"/>
+                    <p>T恤</p>
+                </a>
+            </li>
+            <li class="classify9">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'美妆个护'}">
+                    <img src="./assets/img/classify9.jpg"/>
+                    <p>美妆个护</p>
+                </a>
+            </li>
+            <li class="classify10">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'家居'}">
+                    <img src="./assets/img/classify10.jpg"/>
+                    <p>家居</p>
+                </a>
+            </li>
+            <li class="classify11">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'包包'}">
+                    <img src="./assets/img/classify11.jpg"/>
+                    <p>包包</p>
+                </a>
+            </li>
+            <li class="classify12">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'连衣裙'}">
+                    <img src="./assets/img/classify12.jpg"/>
+                    <p>连衣裙</p>
+                </a>
+            </li>
+            <li class="classify13">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'童装'}">
+                    <img src="./assets/img/classify13.jpg"/>
+                    <p>童装 </p>
+                </a>
+            </li>
+            <li class="classify14">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'男友'}">
+                    <img src="./assets/img/classify14.jpg"/>
+                    <p>男友</p>
+                </a>
+            </li>
+            <li class="classify15">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'内衣'}">
+                    <img src="./assets/img/classify15.jpg"/>
+                    <p>内衣</p>
+                </a>
+            </li>
+            <li class="classify16">
+                <a [routerLink]="['/meilislist']" [queryParams]="{type:'配饰'}">
+                    <img src="./assets/img/classify16.jpg"/>
+                    <p>配饰</p>
+                </a>
+            </li>
+        </ul>
+    </main>
+    <section id="classify_list" >
+        <div class="classify_tab">
+            <span (click)="popular($event)" class="popular">流行</span>
+            <span (click)="hotSale($event)" class="hotSale">热销</span>
+            <span (click)="newTime($event)" class="newTime">上新</span>
+        </div>
+        <ul *ngIf="dataset" >
+            <li *ngFor='let obj of dataset'>
+                <a [routerLink]="['/meilisdetail']" [queryParams]="{id: obj['id']}">
+                    <img src={{obj.img}}/>
+                    <p class="goods_name">{{obj.name}}</p>
+                    <p class="j_sales">￥ {{obj.saleprice}}.00</p>
+                    <p class="j_price"><del>￥{{obj.price}}.00</del></p>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>

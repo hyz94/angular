@@ -1,0 +1,43 @@
+.shezhi{
+    height: 100%;background-color: #F2F5F8;
+    .title{
+        height: 1.640625rem;border-top: 0.03125rem solid #F8F8F8;
+        position:relative;padding-left: 0.3125rem;
+        color:#404040;font-size: 0.609375rem;text-align: center;line-height: 1.46875rem;
+        background-color: #fff;
+        .goback{
+            position:absolute;top: 0;left:0.3125rem;
+            
+            .icon-arrow-left{
+                color:#404040;font-size: 0.609375rem;
+            }
+        }
+    }
+    .userInfo,.versionInfo{
+        padding-left: 0.46875rem;border-top:0.328125rem solid #F2F5F8;
+        background-color: #fff;
+        li{
+            border-bottom:0.015625rem solid #CECCCF;
+
+            a{
+                text-decoration:none;display:block;
+                position:relative;
+                span{
+                    height: 1.5rem;line-height: 1.5rem;display:block;color:#574E54;font-size: 0.5rem;
+                }
+                i{
+                    position:absolute;top: 0.3125rem;right: 0.46875rem;color:#B9B8B8;font-size: 0.78125rem;
+                }
+
+            }
+        }
+    }
+    .exit{
+        background-color: #fff;
+        height: 2.125rem;line-height: 1.65625rem;
+        border-top:0.46875rem solid #F2F5F8;
+        text-align:center;
+        font-size: 0.5rem;color:#FF4472;
+    }
+
+}

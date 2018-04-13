@@ -1,0 +1,59 @@
+.userSetting{
+    height: 100%;background-color: #F2F5F8;
+    .title{
+        height: 1.640625rem;
+        border-top: 0.03125rem solid #F8F8F8;
+        position:relative;
+        color:#404040;
+        font-size: 0.609375rem;
+        text-align: center;line-height: 1.46875rem;
+        background-color: #fff;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        .goback{
+            width:1.875rem;text-align:center;
+            .icon-arrow-left{
+                color:#404040;font-size: 0.609375rem;
+            }
+        }
+        .getpwd{
+            width:3.125rem;
+            text-align:center;
+        }
+        .last{
+            width:1.875rem;text-align:center;
+        }
+    }
+    .userInfo{
+        padding:1.2rem .6rem 0;
+        background-color: #fff;
+        li{
+            
+            input{
+                height: 1.015385rem;
+                border: 0 none;
+                border-bottom: 0.015385rem solid #ededed;
+                width: 100%;
+                margin-bottom: 0.769231rem;
+                text-align: center;
+                font-size: 0.738462rem;
+                background: #fff;
+            }
+            /*修改placeholder颜色*/
+            ::-webkit-input-placeholder { /* WebKit browsers */
+                color:    #EDEDED;
+            }
+            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color:    #EDEDED;
+            }
+            ::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color:    #EDEDED;
+            }
+            :-ms-input-placeholder { /* Internet Explorer 10+ */
+                color:    #EDEDED;
+            }
+
+        }
+    }
+}

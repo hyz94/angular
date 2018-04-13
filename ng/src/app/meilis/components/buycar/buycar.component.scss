@@ -1,0 +1,275 @@
+html,body{height:100%;width:100%;}
+#buycar{
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	.b_header{
+		height:1.25rem;
+		background:#fff;
+		.haveproduct{
+			display:flex;
+			height:1.25rem;
+			flex-direction:row;
+			justify-content:space-between;
+			align-content:center;
+			.back{
+				display:block;
+				height:1.25rem;
+				width:1.5rem;
+				font-size:0.666667rem;
+				line-height:1.25rem;
+				text-align:center;
+				color:#5E5E5E;
+			}
+			.title{
+				font-size:0.4375rem;
+				line-height:1.25rem;
+				color:#3C3C3C;
+			}
+			.compile{
+				display:block;
+				height:1.25rem;
+				width:1.5rem;
+				font-size:0.373333rem;
+				line-height:1.25rem;
+				text-align:center;
+				color:#888888;
+			}
+			.complete{
+				display:block;
+				height:1.25rem;
+				width:1.5rem;
+				font-size:0.373333rem;
+				line-height:1.25rem;
+				text-align:center;
+				color:#888888;
+			}
+		}
+		.noproduct{
+			height:1.25rem;
+			line-height:1.25rem;
+			font-size:0.4375rem;
+			text-align:center;
+			color:#3C3C3C;
+		}
+	}
+	.nullcar{
+		flex:1;
+		overflow-x:hidden;
+		.nullcar_top{
+			height:10.4rem;
+			border-bottom:10px solid #EEEEEE;
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+			align-items:center;
+			p{
+				font-size:0.373333rem;
+				color:#A5A6A6;
+			}
+			a{
+				display:block;
+				height:0.666667rem;
+				width:2.666667rem;
+				border:1px solid #FE6D9E;
+				border-radius:20px;
+				color:#FE6D9E;
+				margin-top:0.4rem;
+				line-height:0.666667rem;
+				text-align:center;
+			}	
+		}
+		.nullcar_bottom{
+		}
+	}
+	.b_main{
+		display:flex;
+		flex-direction:column;
+		margin-top:0.133333rem;
+		background:#fff;
+		flex:1;
+		overflow-x: hidden;
+		.buylist{
+			.buyproduct{
+				border-bottom:1px solid #ccc;
+				display:flex;
+				height:4.426667rem;
+				padding:0.493333rem 0 0.546667rem 0;
+				.product_check{
+					width:0.96rem;
+					display:flex;
+					justify-content:center;
+					align-items:center;
+					input{display:none;}
+					label{
+						height:0.533333rem;
+						width:0.533333rem;
+						border-radius:50%;
+						border:2px solid #666666;
+						display:block;
+					}
+					input[type="checkbox"]:checked + label{
+						background:url(../../../../assets/img/gouzi.png) no-repeat center center;
+						background-size:100% 100%;
+						border:none;
+						
+					}
+				}
+				img{
+					height:3.386667rem;
+					width:2.266667rem;
+					border-radius:0.133333rem;
+				}
+				.product_txt{
+					margin-top:0.106667rem;
+					margin-left:0.266667rem;
+					.title{
+						width:5.866667rem;
+						font-size:0.373333rem;
+						color:#000;
+						font-weight:bolder;
+					}
+					.prop{
+						margin-top:0.4rem;
+						color:#B2B2B2;
+						font-size:0.293333rem;
+						.first{
+							margin-right:0.426667rem;
+						}
+					}
+					.product_price{
+						margin-top:1.0rem;
+						display:flex;
+						flex:1;
+						justify-content:space-between;
+						span{
+							font-size:0.32rem;
+							font-weight:bolder;
+							color:#000;
+						}
+					}
+				}
+				.product_qty{
+					display:flex;
+					flex-direction:column;
+					justify-content:space-between;
+					padding:0.266667rem 0 0.266667rem 0.8rem;
+					.qty_btn{
+						display:flex;
+						.sub_btn{
+							display:inline-block;
+							height:1.12rem;
+							width:1.12rem;
+							background: #F7F7F7;
+							font-size:0.666667rem;
+							line-height:1.12rem;
+							text-align:center;
+							border-radius:0.133333rem;
+						}
+						.qty{
+							height:1.12rem;
+							width:1.6rem;
+							line-height:1.12rem;
+							text-align:center;
+						}
+						.add_btn{
+							display:inline-block;
+							height:1.12rem;
+							width:1.12rem;
+							background: #F7F7F7;
+							font-size:0.666667rem;
+							line-height:1.12rem;
+							text-align:center;
+							border-radius:0.133333rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.b_footer{
+		display:flex;
+		justify-content:space-between;
+		height:1.333333rem;
+		border-bottom:1px solid  #C5C5C5;
+		background: #fff;
+		.f_left{
+			width:3.866667rem;
+			padding:0.266667rem 0.4rem;
+			background: #fff;
+			.all_check{
+				height:100%;
+				display:flex;
+				align-items:center;
+				.box_btn{
+					input{display:none;}
+					label{
+						height:0.6rem;
+						width:0.6rem;
+						border-radius:50%;
+						border:2px solid #666666;
+						display:block;
+					}
+					input[type="checkbox"]:checked + label{
+						background:url(../../../../assets/img/gouzi.png) no-repeat center center;
+						background-size:100% 100%;
+						border:none;
+					}
+				}
+				span{
+					margin-left:0.186667rem;
+					height:100%;
+					display:block;
+					line-height:0.746667rem;
+				}
+			}
+		}
+		.f_right{
+			flex:1;
+			display:flex;
+			justify-content: space-between;
+			background: #fff;
+			.total{
+				padding:0.266667rem 0;
+				p{
+					font-size:0.32rem;
+				}
+				.first{
+					text-align:right;
+					color:#FF6699;
+				}
+			}
+			.account{
+				display: block;
+				height:100%;
+				width:2.773333rem;
+				line-height: 1.306667rem;
+				text-align:center;
+				font-size:0.453333rem;
+				background: #FF6699;
+				color:#fff;
+			}
+		}
+		.f_btn{
+			flex:1;
+			display:flex;
+			justify-content: flex-end;
+			font-weight:bolder;
+			div{
+				height:100%;
+				width:2.506667rem;
+				line-height:1.306667rem;
+				text-align:center;
+				font-size:0.453333rem;
+			}
+			.collect_btn{
+				background:#FFDD19;
+				color:#534731;
+			}
+			.del_btn{
+				background: #FF6699;
+				color:#fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.box{
+    display:flex;
+    height:100%;
+    flex-direction:column;
+    overflow-x: hidden;
+}
+.box>.home_cont{
+    flex:1;
+    overflow-x: hidden;
+    background:#F2F5F8;
+}
+.box>.home_nav{
+    height:1.5625rem;
+    line-height:1.5625rem;
+    text-align:center;
+}
