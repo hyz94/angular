@@ -3,7 +3,8 @@ import { Http } from '@angular/http';
 import { ActivatedRoute, Router} from '@angular/router';  
 import { DOCUMENT } from '@angular/platform-browser';
 import { HttpclientService} from '../../server/httpclientserver.service';
-
+declare var Swiper: any;
+declare var $: any; 
 @Component({
     selector: 'index',
     templateUrl: './index.component.html',
@@ -15,7 +16,14 @@ export class IndexComponent implements OnInit {
     constructor(private http: HttpclientService,private router:Router) { }
 
     ngOnInit() {
-
+        setTimeout(function(){
+            var mySwiper = new Swiper('.swiper-container',{
+                loop: true,autoplay:true,
+                pagination: {
+                  el: '.swiper-pagination',
+                }
+              });  
+        },1000)
         this.http.get('products?popular=1').then((res)=>{
             this.dataset = res['data'];
         })

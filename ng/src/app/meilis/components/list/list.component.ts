@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {HttpclientService} from "../../server/httpclientserver.service"
-
+declare var $: any; 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',

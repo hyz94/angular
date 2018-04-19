@@ -35,7 +35,6 @@ import { DatapickService } from './meilis/server/datapick.service';
 import { HelpcenterComponent } from './meilis/components/helpcenter/helpcenter.component';
 import { ChatComponent } from './meilis/components/chat/chat.component'
 
-import { DetailnavComponent } from './meilis/components/detail/detailnav/detailnav.component'
 
 import { YoulikeComponent } from './meilis/components/buycar/youlike/youlike.component';
 import { AccountComponent } from './meilis/components/buycar/account/account.component';
@@ -75,12 +74,10 @@ import { ShoucangComponent } from './meilis/components/shoucang/shoucang.compone
     SearchComponent,
     YoulikeComponent,
     AccountComponent,
-    DetailnavComponent,
     SecurityComponent,
   
     ChangepwdComponent,
 
-    DetailnavComponent,
     AddressComponent,
     SanjiliandongComponent,
     ShoucangComponent,

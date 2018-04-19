@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';  
 import {HttpclientService} from "../../server/httpclientserver.service"
-
+declare var $: any; 
 
 @Component({
   selector: 'classify',
@@ -21,7 +21,7 @@ export class ClassifyComponent implements OnInit {
         })
     //高亮当前
     $('.popular').css({
-      color: '#f90',
+      color: '#f90'
     })
   }
   getKeys(items){

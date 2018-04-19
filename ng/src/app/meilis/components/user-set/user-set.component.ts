@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpclientService } from '../../server/httpclientserver.service';
 import { DatapickService } from '../../server/datapick.service'
-
+declare var $: any; 
 @Component({
   selector: 'app-user-set',
   templateUrl: './user-set.component.html',

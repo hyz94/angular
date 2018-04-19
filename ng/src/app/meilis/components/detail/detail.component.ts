@@ -1,8 +1,10 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import {Http} from '@angular/http';
 import {Router} from "@angular/router";
-import {DetailnavComponent} from './detailnav/detailnav.component'
 import {HttpclientService} from '../../server/httpclientserver.service'
+import { timeout } from 'q';
+declare var Swiper: any; 
+declare var $: any; 
 
 @Component({
   selector: 'app-detail',
@@ -20,7 +22,28 @@ export class DetailComponent implements OnInit {
   }
   
   ngOnInit() {
-  
+    setTimeout(function(){
+      var mySwiper = new Swiper('.swiper-container2',{
+        loop: true,autoplay:true,
+        // observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        // observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        pagination: {
+          el: '.swiper-pagination',
+        }
+      });  
+      var swiper = new Swiper('.swiper-container1', {
+        slidesPerView: 10,
+        slidesPerColumn: 2,
+        // spaceBetween: 30,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      })
+    },1000)
+    
     // console.log($('.detail_cont'))
     // $('.detail_cont').scroll(function(){
     //   console.log($('.detail_cont').scrollTop())
@@ -101,7 +124,6 @@ export class DetailComponent implements OnInit {
   }
   addCart(){
     console.log('cart')
-    let $ = jQuery;
     $('.zhanwei').css({
       display: 'block'
     })
@@ -118,6 +140,7 @@ export class DetailComponent implements OnInit {
       backgroundColor: '#faecec',
       color: '#000'
     })
+    // console.log(currentColor)
     // console.log(currentsSpan[0].innerText)
     for(let i=0;i<currentsSpan.length;i++){
       if(currentsSpan[i].innerText == currentColor){
@@ -140,8 +163,8 @@ export class DetailComponent implements OnInit {
         currentsSpanSize[i].style.backgroundColor = '#f90';
         currentsSpanSize[i].style.color='#fff'
       } else {
-        currentsSpan[i].style.backgroundColor = '#faecec';
-        currentsSpan[i].style.color='#000'
+        currentsSpanSize[i].style.backgroundColor = '#faecec';
+        currentsSpanSize[i].style.color='#000'
       }
     }
     //点击高亮

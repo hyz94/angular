@@ -77,10 +77,14 @@ export class RegisterComponent implements OnInit {
   // 点击旋转
   rotateLi(e){
       let deg = e.target.style;
+      console.log(deg)
       let deg2 = e.target.style.transform;
+      console.log(deg2)
       deg2 = deg2.slice(7,-4);
       deg2 = deg2*1 + 90;
       e.target.style.transform = `rotate(${deg2}deg)`;
+    //   console.log(e.target.style.transform)
+    //   console.log(deg,deg2)
   }
   
   // 判断是否发送验证码

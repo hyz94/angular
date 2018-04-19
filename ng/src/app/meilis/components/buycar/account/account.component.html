@@ -3,17 +3,17 @@
         <a class="icon iconfont icon-htmal5icon37 back" (click)="goBack($event)"></a>
         <h2 class="title">确认订单</h2>
     </header>
-    <a class="a_address" (click)="goAddress($event)">
+    <div class="a_address" (click)="goAddress($event)">
     	<div class="address_left">
-    		<span class="icon iconfont icon-dizhi1"></span>
+    		<span class="icon iconfont icon-ziyuan"></span>
     	   <p *ngIf="noAddress">请填写收货地址</p>
             <div class="detail_user" *ngIf="hasAddress">
                 <p class="user_username">收货人：{{newAddress.user}}</p>
                 <p class="user_address">{{newAddress.address}}</p>
             </div>
     	</div>
-    	<i class="icon iconfont icon-qianjin"></i>
-    </a>
+    	<i class="icon iconfont icon-icon-arrow-right2"></i>
+    </div>
     <main class="a_main">
     	<ul class="accountlist">
     		<li class="accountproduct" *ngFor="let item of accountData">
@@ -37,7 +37,7 @@
 	    				</div>
     					<span class="qty" *ngIf="!item.btn">
     						&times;{{item.qty}}
-    						<i class="icon iconfont icon-shuxie" (click)="showBtn(item.id)"></i>
+    						<i class="icon iconfont icon-21shuru" (click)="showBtn(item.id)"></i>
     					</span>
     				</div>
     			</div>

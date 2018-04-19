@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpclientService} from '../../server/httpclientserver.service';
 import { ActivatedRoute, Router} from '@angular/router';
-
+declare var $: any; 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
